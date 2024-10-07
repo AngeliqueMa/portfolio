@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angélique MAILLIOT</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/Tab_Icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     
+    <!-- Section affichage du projet -->
+    <section class="section_project_display">
+        <!-- Container infos -->
+        <div class="sub_project_display1">
+            <h1 class="mulish-light">Site web portfolio</h1>
+            <p class="mulish-light">Date de début : Octobre 2024 | Statut : En développement | Technos utilisées : HTML, CSS, Javascript</p>
+        </div>
+        <!-- Container carousel -->
+        <div class="sub_project_display2">
+            <div class="carousel">                
+                <img class="carousel_image" src="./assets/websiteCapture0.png">                
+                <img class="carousel_image" src="./assets/websiteCapture1.png">               
+                <img class="carousel_image" src="./assets/websiteCapture2.png">                
+                <img class="carousel_image" src="./assets/websiteCapture3.png"> 
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div class="carousel_dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="btn_back">
+                <a class="mulish-light" href="./index.html#section_projects">Retour aux projets</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./carousel.js"></script>
+
+</body>
+
+</html>
