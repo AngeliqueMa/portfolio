@@ -1,6 +1,9 @@
 /* -------------------
         GLOBAL 
 -------------------- */
+* {
+    box-sizing: border-box;
+}
 
 body{
     background-image: radial-gradient(circle, #499fa3, #19859a, #006b8e, #00507f, #0b3569);
@@ -20,6 +23,10 @@ header{
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.header_menu{
+    display: none;
 }
 
 .ul_nav li a{
@@ -83,72 +90,6 @@ h1{
 
 .btn_contact a {
     color: #fff;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.6s ease;
-}
-
-.prev {
-    left: 0;
-    border-radius: 0 3px 3px 0;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #e44077;
-}
-
-.carousel_dots{
-    display: flex;
-    justify-content: center;
-}
-
-.btn_back{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.btn_back a{
-    padding: 30px;
-    background-color: #e44077;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 300ms ease-in;
-}
-
-.btn_back a:hover{
-    background-color: #4fc3f7;
 }
 
 /* Scroll bouton */
@@ -248,15 +189,12 @@ h1{
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.6s ease, transform 0.6s ease;
+    margin: 0px 25px 15px 25px;
   }
 
 .timeline_component.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.timeline_component {
-  margin: 0px 25px 15px 25px;
 }
 
 .timeline_middle {
@@ -393,6 +331,72 @@ border-radius: 50%;
 
 .carousel_image img{
     width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #e44077;
+}
+
+.carousel_dots{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_back{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn_back a{
+    padding: 30px;
+    background-color: #e44077;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 300ms ease-in;
+}
+
+.btn_back a:hover{
+    background-color: #4fc3f7;
 }
 
 /* -------------------
@@ -647,7 +651,7 @@ border-radius: 50%;
 
 @media screen and (max-width: 700px) {
     #gif_hello{
-        padding-top: 60px;
+        padding-top: 30px;
     }
     .sub_container_about2{
         flex-wrap: wrap;
@@ -672,9 +676,45 @@ border-radius: 50%;
     }
     .skill_card{
         padding: 5px;
+        margin: 2px;
     }
     .sub_container_skills2{
         gap: 5px;
+    }
+    .sub_container_work2,
+    .sub_container_timeline2 {
+        grid-template-columns: 1fr;
+    }
+    .timeline_middle,
+    .scroll_btn {
+        display: none;
+    }
+    .sub_container_about2{
+        text-align: center;
+    }
+    .ul_nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background-color: #1f1f25;
+        z-index: 1000;
+    }
+    .ul_nav.active {
+        display: flex;
+    }
+    .header_menu {
+        display: block;
+        color: #fff;
+        background-color: #1f1f2500;
+        border: none;
+        padding: 5px;
+        font-size: 24px;
+        cursor: pointer;
     }
 }
 

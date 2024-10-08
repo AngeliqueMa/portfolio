@@ -100,13 +100,36 @@ const skillCards = document.querySelectorAll('.skill_card');
 skillCards.forEach(card => {
   card.addEventListener('mouseenter', function() {
       const tooltip = this.querySelector('.hovertext');
-      tooltip.style.visibility = 'visible';
-      tooltip.style.opacity = '1';
+      if (tooltip) {
+          tooltip.style.visibility = 'visible';
+          tooltip.style.opacity = '1';
+      }
   });
 
   card.addEventListener('mouseleave', function() {
       const tooltip = this.querySelector('.hovertext');
-      tooltip.style.visibility = 'hidden';
-      tooltip.style.opacity = '0';
+      if (tooltip) {
+          tooltip.style.visibility = 'hidden';
+          tooltip.style.opacity = '0';
+      }
   });
 });
+
+
+// Open nav menu on mobile
+const menuToggle = document.querySelector('.header_menu');
+const navList = document.querySelector('.ul_nav');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+const navLinks = document.querySelectorAll('.ul_nav li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('active');
+    });
+});
+
+
