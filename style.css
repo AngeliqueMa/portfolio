@@ -411,10 +411,9 @@ border-radius: 50%;
     justify-content: space-around;
     align-items: center;
     min-height: 550px;
-    padding-top: 5%;
     padding-bottom: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: rgb(233, 241, 227);
 }
 
